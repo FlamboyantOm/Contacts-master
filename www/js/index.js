@@ -87,7 +87,7 @@ function bindAddContactEvents() {
         contact.phoneNumbers = phoneNumbers;
 		
 		 var emailId = [];
-        emailId[0] = new ContactField('home', email, true);
+        emailId[0] = new ContactField('Other', email, true);
         contact.emailId = emailId;
 
 
