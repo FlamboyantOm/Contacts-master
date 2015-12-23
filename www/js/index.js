@@ -72,6 +72,11 @@ function bindAddContactEvents() {
             alert("Please enter a valid Number");
             return false;
         }
+		
+		 if (email.length == 0) {
+            alert("Please enter a Email Id");
+            return false;
+        }
 
         var contact = navigator.contacts.create();
         contact.displayName = name;
