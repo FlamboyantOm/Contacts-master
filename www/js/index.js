@@ -62,7 +62,7 @@ function bindAddContactEvents() {
     $("#addContact").on("click", function () {
         var name = $.trim($("#name").val()),
             number = $.trim($("#number").val());
-
+			email = $.trim($("#email").val());
         if (name.length == 0) {
             alert("Please enter a valid Name");
             return false;
@@ -80,6 +80,11 @@ function bindAddContactEvents() {
         var phoneNumbers = [];
         phoneNumbers[0] = new ContactField('mobile', number, true);
         contact.phoneNumbers = phoneNumbers;
+		
+		 var email = [];
+        email[0] = new ContactField('email', email, true);
+        contact.email = email;
+
 
         contact.save(createSuccess, createError);
     });
